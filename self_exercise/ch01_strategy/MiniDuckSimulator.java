@@ -5,6 +5,7 @@ public class MiniDuckSimulator {
 	}
 
 	public static void main(String[] args) {
+		newline();
 
 		MallardDuck	mallard = new MallardDuck();
 		mallard.setQuackBehavior(new Quack());
