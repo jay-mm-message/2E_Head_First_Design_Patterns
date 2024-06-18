@@ -7,22 +7,22 @@ public class MiniDuckSimulator {
 	public static void main(String[] args) {
 		newline();
 
-		MallardDuck	mallard = new MallardDuck();
+		DuckMallard	mallard = new DuckMallard();
 		mallard.setQuackBehavior(new Quack());
 		mallard.display();
 		mallard.performQuack();
 		mallard.swim();
 		newline();
 
-		ModelDuck modelDuck = new ModelDuck();
-		modelDuck.setQuackBehavior(new MuteQuack());
+		DuckModel modelDuck = new DuckModel();
+		modelDuck.setQuackBehavior(new QuackMute());
 		modelDuck.display();
 		modelDuck.performQuack();
 		modelDuck.swim();
 		newline();
 
-		RubberDuck rubberDuck = new RubberDuck();
-		rubberDuck.setQuackBehavior(new SqueakQuack());
+		DuckRubber rubberDuck = new DuckRubber();
+		rubberDuck.setQuackBehavior(new QuackSqueak());
 		rubberDuck.display();
 		rubberDuck.performQuack();
 		rubberDuck.swim();

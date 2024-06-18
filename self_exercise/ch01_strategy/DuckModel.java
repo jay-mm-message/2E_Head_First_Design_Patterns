@@ -1,5 +1,5 @@
 
-public class ModelDuck extends Duck {
+public class DuckModel extends Duck {
 
 	// public ModelDuck() {
 	// 	quackBehavior = new Quack();

@@ -1,5 +1,5 @@
 
-public class SqueakQuack implements QuackBehavior {
+public class QuackSqueak implements QuackBehavior {
 
     @Override
     public void quack() {

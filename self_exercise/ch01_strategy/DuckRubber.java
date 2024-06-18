@@ -1,5 +1,5 @@
 
-public class RubberDuck extends Duck {
+public class DuckRubber extends Duck {
  
 	// public RubberDuck() {
 	// }

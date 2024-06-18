@@ -1,5 +1,5 @@
 
-public class MallardDuck extends Duck {
+public class DuckMallard extends Duck {
 
 	// public MallardDuck() {
 	// 	quackBehavior = new Quack();
