@@ -11,8 +11,6 @@ public class MallardDuck extends Duck {
 
 	@Override
 	void swim() {
-		// TODO Auto-generated method stub
-		//throw new UnsupportedOperationException("Unimplemented method 'swim'");
 		System.out.println("Mallard ducks float");
 	}
 	

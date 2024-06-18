@@ -11,8 +11,6 @@ public class ModelDuck extends Duck {
 
 	@Override
 	void swim() {
-		// TODO Auto-generated method stub
-		//throw new UnsupportedOperationException("Unimplemented method 'swim'");
 		System.out.println("ModelDuck ducks float");
 	}
 }
