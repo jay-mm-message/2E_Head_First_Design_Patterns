@@ -8,7 +8,7 @@ public class MiniDuckSimulator {
 		newline();
 
 		DuckMallard	mallard = new DuckMallard();
-		mallard.setQuackBehavior(new Quack());
+		mallard.setQuackBehavior(new QuackQuack());
 		mallard.display();
 		mallard.performQuack();
 		mallard.swim();
