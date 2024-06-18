@@ -1,4 +1,3 @@
-package ch01_strategy;
 
 public class SqueakQuack implements QuackBehavior {
 

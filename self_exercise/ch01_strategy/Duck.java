@@ -1,6 +1,4 @@
 
-package ch01_strategy;
-
 public abstract class Duck {
 	QuackBehavior quackBehavior;
 
@@ -18,7 +16,8 @@ public abstract class Duck {
 		quackBehavior.quack();
 	}
 
-	public void swim() {
-		System.out.println("All ducks float, even decoys!");
-	}
+	// public void swim() {
+	// 	System.out.println("All ducks float, even decoys!");
+	// }
+	abstract void swim();
 }

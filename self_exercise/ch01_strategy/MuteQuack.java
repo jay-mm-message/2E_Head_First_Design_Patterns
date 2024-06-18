@@ -1,4 +1,3 @@
-package ch01_strategy;
 
 public class MuteQuack implements QuackBehavior {
 	public void quack() {

@@ -1,11 +1,18 @@
-package ch01_strategy;
 
 public class ModelDuck extends Duck {
-	public ModelDuck() {
-		quackBehavior = new Quack();
-	}
+
+	// public ModelDuck() {
+	// 	quackBehavior = new Quack();
+	// }
 
 	public void display() {
 		System.out.println("I'm a model duck");
+	}
+
+	@Override
+	void swim() {
+		// TODO Auto-generated method stub
+		//throw new UnsupportedOperationException("Unimplemented method 'swim'");
+		System.out.println("ModelDuck ducks float");
 	}
 }

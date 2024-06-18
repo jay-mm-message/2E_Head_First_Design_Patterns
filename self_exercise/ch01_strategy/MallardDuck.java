@@ -1,4 +1,3 @@
-package ch01_strategy;
 
 public class MallardDuck extends Duck {
 
@@ -9,4 +8,12 @@ public class MallardDuck extends Duck {
 	public void display() {
 		System.out.println("I'm a real Mallard duck");
 	}
+
+	@Override
+	void swim() {
+		// TODO Auto-generated method stub
+		//throw new UnsupportedOperationException("Unimplemented method 'swim'");
+		System.out.println("Mallard ducks float");
+	}
+	
 }
