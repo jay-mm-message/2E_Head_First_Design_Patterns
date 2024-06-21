@@ -1,4 +1,4 @@
-
+package ch01_delegateSuperType;
 public abstract class Animal {
     // delegate
     MakeSoundBehavior makeSoundBehavior;

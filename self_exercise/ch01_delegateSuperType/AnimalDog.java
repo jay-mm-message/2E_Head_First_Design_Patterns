@@ -1,4 +1,4 @@
-
+package ch01_delegateSuperType;
 
 public class AnimalDog extends Animal {
 

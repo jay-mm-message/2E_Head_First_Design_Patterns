@@ -1,4 +1,4 @@
-
+package ch01_delegateSuperType;
 public class TestSuperType {
     public static void newline() { System.out.println(); }
     public static void main(String[] args) {

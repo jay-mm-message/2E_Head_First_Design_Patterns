@@ -1,5 +1,4 @@
-
-
+package ch01_delegateSuperType;
 public class AnimalCat extends Animal {
 
     @Override
