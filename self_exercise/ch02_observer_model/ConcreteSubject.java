@@ -15,9 +15,9 @@ public class ConcreteSubject implements Subject {
     }
 
     @Override
-    public void nodifyObserver() {
+    public void notifyObserver() {
         Tools.newline();
-        Tools.tags("nodifyObserver");
+        Tools.tags("notifyObserver");
     }
     
 }
