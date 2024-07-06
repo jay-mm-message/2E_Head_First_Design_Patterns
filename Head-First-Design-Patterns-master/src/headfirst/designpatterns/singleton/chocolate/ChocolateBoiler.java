@@ -3,7 +3,7 @@ package headfirst.designpatterns.singleton.chocolate;
 public class ChocolateBoiler {
 	private boolean empty;
 	private boolean boiled;
-	private static ChocolateBoiler uniqueInstance;
+	private volatile static ChocolateBoiler uniqueInstance;
   
 	private ChocolateBoiler() {
 		empty = true;
@@ -11,9 +11,13 @@ public class ChocolateBoiler {
 	}
   
 	public static ChocolateBoiler getInstance() {
-		if (uniqueInstance == null) {
-			System.out.println("Creating unique instance of Chocolate Boiler");
-			uniqueInstance = new ChocolateBoiler();
+		if (null == uniqueInstance) {
+			synchronized(ChocolateBoiler.class) {
+				if (null == uniqueInstance) {
+					System.out.println("Creating unique instance of Chocolate Boiler");
+					uniqueInstance = new ChocolateBoiler();
+				}
+			}
 		}
 		System.out.println("Returning instance of Chocolate Boiler");
 		return uniqueInstance;
