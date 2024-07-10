@@ -47,7 +47,7 @@ public class Test {
         //     String element = iterator.next();
         //     System.out.println(element);
         // }
-        //Enumeration<String> enumAdatee = Collections.enumeration(list);
+
         Enumeration<String> enumeration = Collections.enumeration(list);
         EnumIterator enumIterator = EnumIterator.getInstance(enumeration);
 
