@@ -102,6 +102,6 @@ public class GumballMachine {
 	}
 	
 	public void currentState() {
-		execute(getClass().getName());
+		execute(state.getClass().getName());
 	}
 }
