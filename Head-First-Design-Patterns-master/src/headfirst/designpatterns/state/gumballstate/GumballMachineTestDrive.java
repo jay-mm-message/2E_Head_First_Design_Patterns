@@ -6,11 +6,8 @@ public class GumballMachineTestDrive {
 		//gM : gumballMachine
 		GumballMachine gM = new GumballMachine(2);
 
-		gM.execute("\n\n\n");
-		// System.out.println(gM);
-		gM.executeTags("init");
-		gM.currentState();
 
+		// System.out.println(gM);
 		gM.executeTags("insertQuarter");
 		gM.insertQuarter();
 
