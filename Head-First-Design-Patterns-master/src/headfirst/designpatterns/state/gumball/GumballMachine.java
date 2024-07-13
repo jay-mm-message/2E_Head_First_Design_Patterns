@@ -62,16 +62,23 @@ public class GumballMachine {
 	}
  
 	public void turnCrank() {
-		if (state == SOLD) {
-			System.out.println("Turning twice doesn't get you another gumball!");
-		} else if (state == NO_QUARTER) {
-			System.out.println("You turned but there's no quarter");
-		} else if (state == SOLD_OUT) {
-			System.out.println("You turned, but there are no gumballs");
-		} else if (state == HAS_QUARTER) {
-			System.out.println("You turned...");
-			state = SOLD;
-			dispense();
+		switch (state) {
+			case SOLD:
+				execute("Turning twice doesn't get you another gumball!");
+				break; 
+			case NO_QUARTER:
+				execute("You turned but there's no quarter");
+				break;
+			case SOLD_OUT:
+				execute("You turned, but there are no gumballs");
+				break;
+			case HAS_QUARTER:
+				execute("You turned...");
+				state = SOLD;
+				dispense();
+				break;
+			default:
+				break;
 		}
 	}
  
