@@ -15,15 +15,26 @@ public class GumballMachineTestDrive {
 		gM.turnCrank();
 
 		// System.out.println(gumballMachine);
+		gM.executeTags("insertQuarter");
+		gM.insertQuarter();
 
-		// gumballMachine.insertQuarter();
-		// gumballMachine.turnCrank();
-		// gumballMachine.insertQuarter();
-		// gumballMachine.turnCrank();
+		gM.executeTags("turnCrank");
+		gM.turnCrank();
+
+		gM.executeTags("insertQuarter");
+		gM.insertQuarter();
+
+		gM.executeTags("turnCrank");
+		gM.turnCrank();
 		
-		// gumballMachine.refill(5);
-		// gumballMachine.insertQuarter();
-		// gumballMachine.turnCrank();
+		gM.executeTags("refill");
+		gM.refill(5);
+
+		gM.executeTags("insertQuarter");
+		gM.insertQuarter();
+
+		gM.executeTags("turnCrank");
+		gM.turnCrank();
 
 		// System.out.println(gumballMachine);
 	}
