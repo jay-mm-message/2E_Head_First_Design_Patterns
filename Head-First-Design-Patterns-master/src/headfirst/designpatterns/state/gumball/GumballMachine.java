@@ -122,14 +122,21 @@ public class GumballMachine {
 			result.append("s");
 		}
 		result.append("\nMachine is ");
-		if (state == SOLD_OUT) {
-			result.append("sold out");
-		} else if (state == NO_QUARTER) {
-			result.append("waiting for quarter");
-		} else if (state == HAS_QUARTER) {
-			result.append("waiting for turn of crank");
-		} else if (state == SOLD) {
-			result.append("delivering a gumball");
+		switch (state) {
+			case SOLD_OUT:
+				result.append("sold out");
+				break; 
+			case NO_QUARTER:
+				result.append("waiting for quarter");
+				break; 
+			case HAS_QUARTER:
+				result.append("waiting for turn of crank");
+				break; 
+			case SOLD:
+				result.append("delivering a gumball");
+				break;
+			default:
+				break;
 		}
 		result.append("\n");
 		return result.toString();
