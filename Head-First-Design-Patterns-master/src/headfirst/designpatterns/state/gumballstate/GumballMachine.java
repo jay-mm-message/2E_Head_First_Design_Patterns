@@ -16,11 +16,16 @@ public class GumballMachine {
 		hasQuarterState = new HasQuarterState(this);
 		soldState = new SoldState(this);
 
+		execute("\n\n\n");
+		executeTags("init");
+		
 		this.count = numberGumballs;
  		if (isExistGumball()) {
 			state = noQuarterState;
+			stateChange();
 		} else {
 			state = soldOutState;
+			stateChange();
 		}
 	}
  
@@ -60,7 +65,7 @@ public class GumballMachine {
 	}
 
 	void stateChange() {
-		execute(this.state.getClass().getName());
+		execute("[" + this.state.getClass().getName() + "]");
 	}
 
     public State getState() {
