@@ -9,34 +9,45 @@ public class WinnerState implements State {
     }
  
 	public void insertQuarter() {
-		System.out.println("Please wait, we're already giving you a Gumball");
+		execute("Please wait, we're already giving you a Gumball");
 	}
  
 	public void ejectQuarter() {
-		System.out.println("Please wait, we're already giving you a Gumball");
+		execute("Please wait, we're already giving you a Gumball");
 	}
  
 	public void turnCrank() {
-		System.out.println("Turning again doesn't get you another gumball!");
+		execute("Turning again doesn't get you another gumball!");
 	}
  
 	public void dispense() {
-		System.out.println("YOU'RE A WINNER! You get two gumballs for your quarter");
+		execute("YOU'RE A WINNER! You get two gumballs for your quarter");
 		gumballMachine.releaseBall();
-		if (gumballMachine.getCount() == 0) {
+		if (!isExistGumball()) {
 			gumballMachine.setState(gumballMachine.getSoldOutState());
 		} else {
 			gumballMachine.releaseBall();
-			if (gumballMachine.getCount() > 0) {
+			if (isExistGumball()) {
 				gumballMachine.setState(gumballMachine.getNoQuarterState());
 			} else {
-          		 	System.out.println("Oops, out of gumballs!");
+          		 	execute("Oops, out of gumballs!");
 				gumballMachine.setState(gumballMachine.getSoldOutState());
 			}
 		}
 	}
  
+	public boolean isExistGumball() {
+		if (gumballMachine.getCount() > 0) {
+			return true;
+		}
+		return false;
+	};
+
 	public String toString() {
 		return "despensing two gumballs for your quarter, because YOU'RE A WINNER!";
+	}
+
+	public void execute(String msg) {
+		System.out.println(msg);
 	}
 }
