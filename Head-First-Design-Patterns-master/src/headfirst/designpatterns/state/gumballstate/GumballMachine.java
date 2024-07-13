@@ -103,6 +103,11 @@ public class GumballMachine {
 		return false;
 	}
 
+	public void executeTags(String msg) {
+		String tags = new String("--------");
+		execute(tags + msg + tags);
+	}
+
 	public void execute(String msg) {
 		System.out.println(msg);
 	}
