@@ -17,7 +17,7 @@ public class GumballMachine {
 		soldState = new SoldState(this);
 
 		this.count = numberGumballs;
- 		if (numberGumballs > 0) {
+ 		if (isExistGumball()) {
 			state = noQuarterState;
 		} else {
 			state = soldOutState;
@@ -88,5 +88,12 @@ public class GumballMachine {
 		result.append("\n");
 		result.append("Machine is " + state + "\n");
 		return result.toString();
+	}
+
+	public boolean isExistGumball() {
+		if (this.count > 0) {
+			return true;
+		}
+		return false;
 	}
 }
