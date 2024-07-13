@@ -8,4 +8,5 @@ public interface State {
 	public void dispense();
 	
 	public void refill();
+	public void execute();
 }
