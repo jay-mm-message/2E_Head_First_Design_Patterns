@@ -13,16 +13,16 @@ public class HasQuarterState implements State {
 	}
   
 	public void insertQuarter() {
-		System.out.println("You can't insert another quarter");
+		execute("You can't insert another quarter");
 	}
  
 	public void ejectQuarter() {
-		System.out.println("Quarter returned");
+		execute("Quarter returned");
 		gumballMachine.setState(gumballMachine.getNoQuarterState());
 	}
  
 	public void turnCrank() {
-		System.out.println("You turned...");
+		execute("You turned...");
 		int winner = randomWinner.nextInt(10);
 		if (winner == 0) {
 			gumballMachine.setState(gumballMachine.getWinnerState());
@@ -32,10 +32,14 @@ public class HasQuarterState implements State {
 	}
 
     public void dispense() {
-        System.out.println("No gumball dispensed");
+        execute("No gumball dispensed");
     }
  
 	public String toString() {
 		return "waiting for turn of crank";
+	}
+
+	public void execute(String msg) {
+		System.out.println(msg);
 	}
 }
