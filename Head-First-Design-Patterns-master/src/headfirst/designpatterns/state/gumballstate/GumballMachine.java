@@ -96,4 +96,12 @@ public class GumballMachine {
 		}
 		return false;
 	}
+
+	public void execute(String msg) {
+		System.out.println(msg);
+	}
+	
+	public void currentState() {
+		execute(getClass().getName());
+	}
 }
