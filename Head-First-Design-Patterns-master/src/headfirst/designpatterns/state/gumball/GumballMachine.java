@@ -115,12 +115,14 @@ public class GumballMachine {
 
 	public String toString() {
 		StringBuffer result = new StringBuffer();
+		result.append("\n--------------- Machine information -----------------");
 		result.append("\nMighty Gumball, Inc.");
 		result.append("\nJava-enabled Standing Gumball Model #2004\n");
 		result.append("Inventory: " + count + " gumball");
 		if (count != 1) {
 			result.append("s");
 		}
+		result.append("\n----------------------------------------------------\n");
 		result.append("\nMachine is ");
 		switch (state) {
 			case SOLD_OUT:
