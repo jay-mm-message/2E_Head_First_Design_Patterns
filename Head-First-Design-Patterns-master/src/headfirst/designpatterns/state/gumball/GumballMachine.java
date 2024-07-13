@@ -17,16 +17,27 @@ public class GumballMachine {
 		}
 	}
   
+	public void execute(String msg) {
+		System.out.println(msg);
+	}
+
 	public void insertQuarter() {
-		if (state == HAS_QUARTER) {
-			System.out.println("You can't insert another quarter");
-		} else if (state == NO_QUARTER) {
-			state = HAS_QUARTER;
-			System.out.println("You inserted a quarter");
-		} else if (state == SOLD_OUT) {
-			System.out.println("You can't insert a quarter, the machine is sold out");
-		} else if (state == SOLD) {
-        	System.out.println("Please wait, we're already giving you a gumball");
+		switch (state) {
+			case HAS_QUARTER:
+				execute("You can't insert another quarter");
+				break; 
+			case NO_QUARTER:
+				state = HAS_QUARTER;
+				execute("You inserted a quarter");
+				break; 
+			case SOLD_OUT:
+				execute("You can't insert a quarter, the machine is sold out");
+				break; 
+			case SOLD:
+				execute("Please wait, we're already giving you a gumball");
+				break;
+			default:
+				break;
 		}
 	}
 
