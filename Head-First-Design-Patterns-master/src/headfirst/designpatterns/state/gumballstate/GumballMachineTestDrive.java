@@ -8,16 +8,14 @@ public class GumballMachineTestDrive {
 
 		gM.execute("\n\n\n");
 		// System.out.println(gM);
-		gM.execute("init");
+		gM.executeTags("init");
 		gM.currentState();
 
-		gM.execute("insertQuarter");
+		gM.executeTags("insertQuarter");
 		gM.insertQuarter();
-		gM.currentState();
 
-		gM.execute("turnCrank");
+		gM.executeTags("turnCrank");
 		gM.turnCrank();
-		gM.currentState();
 
 		// System.out.println(gumballMachine);
 
