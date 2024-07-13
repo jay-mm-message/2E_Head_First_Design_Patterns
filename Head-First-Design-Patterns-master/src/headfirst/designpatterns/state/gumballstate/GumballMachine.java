@@ -56,7 +56,13 @@ public class GumballMachine {
 
 	void setState(State state) {
 		this.state = state;
+		stateChange();
 	}
+
+	void stateChange() {
+		execute(this.state.getClass().getName());
+	}
+
     public State getState() {
         return state;
     }

@@ -3,24 +3,33 @@ package headfirst.designpatterns.state.gumballstate;
 public class GumballMachineTestDrive {
 
 	public static void main(String[] args) {
-		GumballMachine gumballMachine = new GumballMachine(2);
+		//gM : gumballMachine
+		GumballMachine gM = new GumballMachine(2);
 
-		System.out.println(gumballMachine);
+		gM.execute("\n\n\n");
+		// System.out.println(gM);
+		gM.execute("init");
+		gM.currentState();
 
-		gumballMachine.insertQuarter();
-		gumballMachine.turnCrank();
+		gM.execute("insertQuarter");
+		gM.insertQuarter();
+		gM.currentState();
 
-		System.out.println(gumballMachine);
+		gM.execute("turnCrank");
+		gM.turnCrank();
+		gM.currentState();
 
-		gumballMachine.insertQuarter();
-		gumballMachine.turnCrank();
-		gumballMachine.insertQuarter();
-		gumballMachine.turnCrank();
+		// System.out.println(gumballMachine);
+
+		// gumballMachine.insertQuarter();
+		// gumballMachine.turnCrank();
+		// gumballMachine.insertQuarter();
+		// gumballMachine.turnCrank();
 		
-		gumballMachine.refill(5);
-		gumballMachine.insertQuarter();
-		gumballMachine.turnCrank();
+		// gumballMachine.refill(5);
+		// gumballMachine.insertQuarter();
+		// gumballMachine.turnCrank();
 
-		System.out.println(gumballMachine);
+		// System.out.println(gumballMachine);
 	}
 }
