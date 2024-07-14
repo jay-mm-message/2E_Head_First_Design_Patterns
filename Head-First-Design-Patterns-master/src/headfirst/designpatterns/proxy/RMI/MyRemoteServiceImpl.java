@@ -15,7 +15,7 @@ public class MyRemoteServiceImpl extends UnicastRemoteObject implements MyRemote
     }
 
     public String serviceResponse(String msg) throws RemoteException {
-        return "\n(service) respone: I'm there.";
+        return "\n(service) response: I'm there.";
     }
     
     private static final long serialVersionUID = 1L;
