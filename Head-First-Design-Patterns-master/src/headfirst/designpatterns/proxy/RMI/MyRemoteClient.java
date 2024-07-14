@@ -21,8 +21,9 @@ public class MyRemoteClient {
         //     e.printStackTrace();
         // }
         try {
-            String host = "127.0.0.1";//(args.length < 1) ? null : args[0];
-            Registry registry = LocateRegistry.getRegistry(host, 1099);
+            String RMI_host = "127.0.0.1";
+            int RMI_port = 1099;
+            Registry registry = LocateRegistry.getRegistry(RMI_host, RMI_port);
             MyRemoteService stub = (MyRemoteService) registry.lookup("RemoteSayHi");
             // String response = stub.sayHi();
             // execute("response: " + response);

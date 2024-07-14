@@ -5,7 +5,7 @@ import java.rmi.RemoteException;
 
 public interface MyRemoteService extends Remote {
     public String sayHi() throws RemoteException;
-    
+
     public String clientQuery(String msg) throws RemoteException;
-    public String serviceRespone(String msg) throws RemoteException;
+    public String serviceResponse(String msg) throws RemoteException;
 }
