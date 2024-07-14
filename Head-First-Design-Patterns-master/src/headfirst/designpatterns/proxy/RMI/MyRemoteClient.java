@@ -10,9 +10,6 @@ public class MyRemoteClient {
         new MyRemoteClient().go();
     }
     
-    String ip = "rmi://127.0.0.1/RemoteSayHi";
-    //String ip = "rmi://192.168.1.103/RemoteSayHi";
-    
     public void go() {
         // try {
         //     MyRemoteService service = 
