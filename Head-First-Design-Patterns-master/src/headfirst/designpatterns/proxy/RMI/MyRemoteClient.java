@@ -1,6 +1,5 @@
 package headfirst.designpatterns.proxy.RMI;
 
-import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
