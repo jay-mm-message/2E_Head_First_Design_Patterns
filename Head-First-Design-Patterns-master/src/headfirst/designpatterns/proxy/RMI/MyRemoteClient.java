@@ -24,11 +24,20 @@ public class MyRemoteClient {
             String host = "127.0.0.1";//(args.length < 1) ? null : args[0];
             Registry registry = LocateRegistry.getRegistry(host, 1099);
             MyRemoteService stub = (MyRemoteService) registry.lookup("RemoteSayHi");
-            String response = stub.sayHi();
-            System.out.println("response: " + response);
+            // String response = stub.sayHi();
+            // execute("response: " + response);
+            
+            String response;
+            response = stub.clientQuery("client: Are you there service");
+            execute(response);
+
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();
         }
+    }
+
+    public void execute(String msg) {
+        System.out.println(msg);
     }
 }
