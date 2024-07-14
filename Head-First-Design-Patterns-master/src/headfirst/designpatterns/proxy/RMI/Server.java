@@ -12,13 +12,18 @@ public class Server {
         //     System.out.println(e.getMessage());
         // }
         try {
-            MyRemoteServiceImpl obj = new MyRemoteServiceImpl();
             Registry registry = LocateRegistry.createRegistry(1099); // Default port
-            registry.bind("RemoteSayHi", obj);
+            //MyRemoteServiceImpl obj = new MyRemoteServiceImpl();
+            //registry.bind("RemoteSayHi", obj);
+            registry.bind("RemoteSayHi", new MyRemoteServiceImpl());
             System.out.println("Server ready");
         } catch (Exception e) {
             System.err.println("Server exception: " + e.toString());
             e.printStackTrace();
         }
+    }
+    
+    public void execute(String msg) {
+        System.out.println(msg);
     }
 }
